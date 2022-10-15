@@ -7,4 +7,4 @@ services:
       - "3000:3000"
     volumes:
       - .:/usr/src/app
-    command: go run cmd/main.go -b 0.0.0.0
+    command: air ./cmd/main.go -b 0.0.0.0
