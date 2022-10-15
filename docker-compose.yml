@@ -10,3 +10,12 @@ services:
     volumes:
       - .:/usr/src/app
     command: air ./cmd/main.go -b 0.0.0.0
+  db:
+    image: postgres:alpine
+  ports:
+    - "5432:5432"
+  volumes:
+    - postgres-db:/var/lib/postgresql/data
+
+volumes:
+  postgres-db:
