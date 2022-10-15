@@ -1,5 +1,3 @@
-// cmd/main.go
-
 package main
 
 import (
@@ -12,9 +10,7 @@ func main() {
 
 	app := fiber.New()
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Div Rhino Trivia App!")
-	})
+	setupRoutes(app)
 
 	app.Listen(":3000")
 }
